@@ -4,10 +4,24 @@ Bootcamp GFT Java #5 - projeto GIT (inicializando repositório e configurações
 ## Aqui vai um pequeno Tutorial:
 
 Criação de chave SSH para acesso facilitado as alterações do GitHub sem necessitar de autenticação via navegador: <br>
-- **Primeiro passo** - Abra o GitBash e digite o seguinte código: ssh-keygen -t ed25519 -C seuemail@gmail.com; <br><br>
-- **Segundo passo** - Serão geradas duas chaves em um local especificado no seu bash *id_ed25519 e id_ed25519.pub*, navegue até lá e abra a chave pública (.pub) usando "cat id_ed25519.pub" para conseguir visualizar o conteúdo e copiar para seu GitHub; <br><br>
-- **Terceiro passo** - Agora só confirmar que seu bash continua na pasta .ssh e inicializar o agente que administrará suas chaves usando o cod: *eval $(ssh-agent -) id_ed25519*<br><br>
-- **Finalizando** - Execute no mesmo bash o cod ssh-add *id_ed25519*<br><br>
+- **Primeiro passo** - Abra o GitBash e digite o seguinte código: 
+~~~ 
+ssh-keygen -t ed25519 -C seuemail@gmail.com; 
+~~~
+- **Segundo passo** - Serão geradas duas chaves em um local especificado no seu bash *id_ed25519 e id_ed25519.pub*, navegue até lá e abra a chave pública (.pub) usando 
+~~~
+cat id_ed25519.pub
+~~~
+Assim irá conseguir visualizar o conteúdo e copiar para seu GitHub na opção settings do seu perfil; <br><br>
+
+- **Terceiro passo** - Agora só confirmar que seu bash continua na pasta .ssh e inicializar o agente que administrará suas chaves usando o cod: 
+~~~
+eval $(ssh-agent -) id_ed25519
+~~~
+- **Finalizando** - Execute no mesmo bash o cod 
+~~~
+ssh-add *id_ed25519*
+~~~
 
 ### Preparando para versionar com Git
 
